@@ -1,0 +1,17 @@
+Home Task 5: Date and Time functions and Transactions
+
+ER-diagram of the training database (for tasks 1 and 2):
+
+
+1.	Select the names (‘STNAME’ column) and birthdays (‘BIRTHDAY’ column) of students from the ‘Student’ table who are 33 years old and older on the current date. Use DATEDIFF function in your SQL query.
+
+2.	Select the names (‘STNAME column) and birthdays (‘BIRTHDAY’ column) of students from the ‘Student’ table who will turn 29 this year. Use DATEADD + DATEPART or YEAR functions.
+
+3.	You need to perform calculations with any number. For example, you can take the following:
+
+It is necessary to answer the question: what will be final number after consecutive execution of the following queries (we assume that all of them were executed without errors)?
+
+Example of the format how the answer should be prepared:
+Original number: 55
+Calculations: 55 – 5 + 20 +30 = 100
+Total number: 100
