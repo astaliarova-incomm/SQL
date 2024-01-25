@@ -1,0 +1,11 @@
+1. Create a new project “DWBI” Azure DevOps.
+2. Create three subsections in "DWBI” section: 
+Data Completeness testing 
+
+Data Transformations testing 
+
+Data Quality testing 
+
+
+ 3. Using provided DWH Schema and the data mapping sheet created in “DWH Fundamentals” module, in each subsection create test cases which correspond to the testing types (Data Completeness testing, Data Transformations testing, Data Quality testing) for checking the data that has been loaded from the source (dw_source layer) to the destination (dw_store layer). Additionally, specify in a test case’s title DQ Dimension that you are going to measure with the given test case. 
+Note: Use previously installed SQL Server and SQL Server Management Studio to write the SQL scripts. 
