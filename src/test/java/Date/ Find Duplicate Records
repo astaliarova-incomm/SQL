@@ -1,0 +1,10 @@
+Perform the following steps:
+Create 2 tables tblInvoiceSource and tblInvoiceDestination in the SQL Server Management Studio in CDP_DP database using the queries from the Queries for tables creation.sql file
+Import data from the Duplicate Records.xlsx file in the tables, that were created in the 1 step, tblInvoiceSource and tblInvoiceDestination using the "Import Data" function
+Compare 2 tables, find duplicate, redundant rows and create views with them
+The task has to be drawn up in Microsoft Word obeying the following structure:
+
+task description,
+the SQL script listing,
+a screenshot with the script and resulting table from SQL Server Management Studio.
+
