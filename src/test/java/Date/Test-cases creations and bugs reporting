@@ -1,0 +1,106 @@
+Home task - Write test cases for requirements
+Calories calculator
+The application for tracking calories that the user consumes during the day.
+User Story 1 - Entering user parameters on Parameters screen
+Description: as a user, I want to be able to enter my parameters into the application, so that the parameters are saved for further calculations and tracking.
+Acceptance criteria:
+When the user launches the application and user parameters were not previously entered, the Parameters screen is opened with the following fields:
+1.	Gender, a man/woman (radio-button; default = empty)
+2.	Age (years) (user-entry field, max length =3, numeric; default = empty)
+3.	Height (cm) (user-entry field, max length =3, numeric; default = empty)
+4.	Weight (kg) (user-entry, max length = 3, numeric; default = empty)
+5.	Lifestyle (drop-down with values “Very Active”, “Active”, “Medium”, “Inactive”; default = empty)
+The user is able to enter all the fields. The following button is available on the screen:
+6.	Save – the information is saved, the screen Calories Limit screen is displayed.
+If the user does not click the Save button, the information is not saved and is lost when the user navigates away from the Parameters screen.
+
+User Story 2 - Updating user parameters on Parameters screen
+Description: as a user, I want to be able to update my parameters in the application, so that the parameter updates are saved for further calculations and tracking.
+Acceptance criteria:
+From any screen of the application user is able to select Parameters from the Menu. Upon clicking Parameters from the menu, the Parameters screen is open with the following items:
+Fields:
+1.	Height
+2.	Weight
+3.	Lifestyle
+Button:
+4.	Save
+The fields are pre-filled with the values, previously Saved by the user. If the user has not previously saved Parameters, the field values are default (US1).
+The user can update Parameters and Save the updates. When the user clicks Save button, the changes are saved, and the user is navigated to the Calories Limit screen.
+In case the user does not click the Save button, the parameters updates are not saved, and changes are lost when the user navigates away from the Parameters screen.
+
+User Story 3 – Calculating Calories Limit
+Description: as a system, I need to calculate the Calories limit for the user so that it is used for further calories calculation.
+ Acceptance criteria:
+As soon as user saves Parameters, the system calculates the Calories Limit, based on the Parameters.
+The Calories Limit screen is opened when the User clicks Save on the parameters screen, or when the user selects “Calories Limit” item from Menu.
+The Calories Limit page has the following fields:
+•	Suggested calories limit (read-only, calculated by the formula based on user parameters)
+•	Adjusted calories (user-entry field, max length = 4, numeric; default = empty)
+The user can review Suggested calories field.
+The user can enter the value into the Adjusted calories field and Save it.
+Formula for calculating calories limit:
+Calories limit = BMR*Activity factor
+BMR = 10 * weight(kg) + 6.25 * height(cm) - 5 * age(y) + 5         (man)
+BMR = 10 * weight(kg) + 6.25 * height(cm) - 5 * age(y) - 161     (woman)
+
+Activity Factor (Lifestyle drop-down):
+•	Very Active = 1.9
+•	Active = 1.7
+•	Medium = 1.5
+•	Inactive = 1.2
+•	Activity factor is not selected = 1
+
+User Story 4 – Keep track of consumed calories
+Description: as a user, I need to be able to enter the products I have eaten into the system, in order to calculate the calories I have consumed.
+Acceptance criteria:
+When the user launches the application, and his/her parameters has previously been saved, the Enter Meal screen is opened. Or the Enter Meal screen us opened when the user clicks Enter Meal menu item from the Menu.
+The Enter Meal screen has the following items on page:
+•	Date (read-only, sysdate)
+•	Button +
+•	A Meal table with three rows: Product, Product Weight, Calories (populated with the data selected on Search Product pop up). A product can be deleted from the table.
+•	Total Calories (a progress bar, length = Calories limit, Calories consumed = sum of all calories from the table Meal; remaining calories = calories limit – calories consumed). In case user exceeds calories limit, the amount of extra calories is displayed in red under the progress bar.
+When the user clicks the Button +, the Search Product pop-up is opened with the following fields:
+•	Search (user-entered, alpha-numeric, max length = 50; default=empty; dynamic search after entering every symbol)
+•	Product – populated when user selects a product in search
+•	Product Weight, g (user-entered, numeric, max length = 4; default=100)
+•	Calories (dynamically calculated based on the product and product weight; can be overridden by the user)
+The following Buttons
+•	Add
+•	Cancel
+The user can find the product in the database, select the product, and enter product weight.
+Clicking the Add button saves the amount of calories into the Meal table on Enter Meal screen. The fields on Search Product screen are reset to default.
+Clicking the Cancel button closes the pop-up, unsaved data is dropped.
+
+User story 5 – View Statistics
+Description: As a user, I need to be able to see the statistics of my weight and consumed calories, in order to track my progress.
+Acceptance criteria:
+User is able to select Statistics menu item. Clicking the Statistics menu item takes the user to Statistics screen with 2 charts:
+•	Weight (x axis = days, y axis = weight in kg on this day, from the Parameters page)
+•	Calories (x axis = days, y axis = calories consumed on this day)
+The charts data range is dynamically updates to fit the min and max values range.
+Default amount of days that are displayed on charts is last 7 days.
+User is able to adjust the statistics interval by clicking the Statistic Interval button. Statistic Interval button opens a calendar pop-up where the user can select Date From and Date To consequently. When user selects the Date To – the calendar pop up closes, and the charts Weight and Calories are updated based on the selected interval.
+The max interval user can select is 180 days, min interval 1 day. If the user selects Date From > Date To – the systems inverts the dates (calculates the Interval taken Date To = Date From and vice versa).
+If Date From, selected by the user, is earlier than the first day tracked by the system – Date From = Date of the first data entry.
+
+Defects reporting
+For user story #1
+Report defects for point #2 for Age field, it contains the value 20 by default and the application allows input 5 symbols in this field.
+The QA selects the value “Very Active” in the Lifestyle field in drop-down and after clicking on the “Save” button in the data base in the table Personal_info the QA sees the value “Inactive” in the “Lifestyle” column.
+When QA selects any value in the “Gender“field after clicking on the “Save” button this information is not saved.
+Personal_info
+User ID	Gender	Age	Height	Weight	Lifestyle
+
+
+
+For user story #2
+1.	After clicking on clicking Parameters from the menu the QA sees the following items:
+•	Height
+•	Weight
+•	Lifestyle
+•	Gender
+2.	After clicking on the button “Save” the QA is redirected to Start (Home) page.
+
+
+
+
