@@ -1,0 +1,24 @@
+Home Task 4: SQL String, Mathematical, Numeric, Advanced functions
+ER-diagram of the training database:
+
+
+1.	Select students from the ‘Student’ table and their cities of residence from the ‘City’ table. Filter out only those students who study at the university on P. Brovki street and sort them by student names. You need to write 1 SQL query with CTE using WITH clause. The query should contain SELECT statement, WHERE clause with one condition, several JOINs (INNER JOIN and LEFT OUTER JOIN), the operator for sorting.
+
+2.	Select all the cities and universities that are in these cities. Sort the results by the IDs of universities. You need to write 1 SQL query with LEFT JOIN.
+
+3.	Select all subjects, the teachers who teach them and the average wage of teachers. You need to write 1 SQL query using LEFT JOINs, group function AVG and CONVERT function.
+
+4.	Select all teachers, the subjects they teach and the subjects’ duration. You need to write 1 SQL query with RIGHT JOIN.
+
+5.	Select all teachers and all subjects. You need to write 1 SQL query with FULL JOIN.
+
+6.	Calculate the average number of residents living in the cities from the ‘City’ table. You need to write 1 SQL query with group function AVG and CONVERT function.
+Example of the result:
+
+
+7.	Select the youngest student from the ‘Student’ table. You need to write 1 SQL query with group function MAX and subquery in the condition.
+
+8.	Select all cities and the number of universities in each city. You need to write 1 SQL query with pseudocolumn in the form of a subquery, column aliases, group function COUNT.
+
+9.	Select the average income (bursary + bonus) for each ID_GROUP for students from the city of Minsk. The income should be selected from the virtual table which is the result of combining the columns from the ‘Student’ and ‘City’ tables. Sort the groups in descending order of the average income. You need to write 1 SQL query with group function AVG, subquery with JOIN in FROM section, converting NULL to a specific value (ISNULL function).
+
