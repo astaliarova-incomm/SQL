@@ -1,0 +1,9 @@
+Create scripts to test ETL flow between the dw_source, dw_stage and dw_store layers based on the data mapping sheet created in the previous task. WITH clause can be useful.
+The task has to be drawn up in the Microsoft Word obeying the following structure:
+
+task condition,
+the SQL script listing (send it as a separate file, if it is too long),
+a screenshot with the script and resulting table from SQL Server Management Studio.
+
+      3. If the bugs are detected, they should be reported.
+Note: Use previously installed SQL Server and SQL Server Management Studio to run the SQL scripts.
